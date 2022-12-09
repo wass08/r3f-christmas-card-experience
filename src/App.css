@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Poppins:wght@400;700&display=swap");
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 12px;
+  }
+}
+body {
+  cursor: none;
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Mountains of Christmas", cursive;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: red;
+  opacity: 0.8;
+  z-index: 42;
+}
+
+.cursor-dot--outline {
+  width: 36px;
+  height: 36px;
+  opacity: 0.6;
+}
+
+.interface {
+  position: fixed;
+  bottom: 42px;
+  left: 42px;
+  z-index: 1;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  max-width: 50vw;
+}
+
+.interface:before {
+  content: "";
+  width: 1px;
+  height: 42vh;
+  background: white;
+  position: absolute;
+  bottom: calc(100% + 32px);
+}
+
+.interface:after {
+  content: "";
+  height: 1px;
+  width: 42vw;
+  background: white;
+  position: absolute;
+  left: calc(100% + 32px);
+  top: 100%;
+}
+
+.interface__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.interface__link {
+  color: white;
+  text-decoration: none;
+}
+
+.watermark {
+  position: absolute;
+  right: 42px;
+  bottom: 42px;
+  z-index: 1;
+  width: 102px;
+}
